@@ -26,6 +26,8 @@ jobs:
 
       - run: echo github.ref ${{ github.ref }}
       - run: echo github.event.release.tag_name ${{ github.event.release.tag_name }}
+      
+      - run: echo $GITHUB_TAG
 
       - name: Dump gh.event.release
         run: echo "$JOB_CONTEXT"
