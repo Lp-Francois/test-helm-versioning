@@ -24,10 +24,10 @@ jobs:
 
       - run: yarn
 
-      - run: yarn publish
       - run: echo ${{ github.ref }}
       - run: echo ${{ github.event.release.tag_name }}
       - run: cat package.json
+      # - run: yarn publish
 
         # env:
         #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
