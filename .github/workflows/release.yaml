@@ -26,6 +26,8 @@ jobs:
 
       - run: echo ${{ github.ref }}
       - run: echo ${{ github.event.release.tag_name }}
+      - run: echo ${{ github.event.release }}
+      - run: echo ${{ github.event }}
       - run: cat package.json
       # - run: yarn publish
 
