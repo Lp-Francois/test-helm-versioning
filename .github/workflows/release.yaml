@@ -24,12 +24,20 @@ jobs:
 
       - run: yarn
 
-      - run: echo ${{ github.ref }}
-      - run: echo ${{ github.event.release.tag_name }}
-      - run: echo ${{ github.event.release }}
-      - run: echo ${{ fromJSON(github.event.release) }}
+      - run: echo github.ref ${{ github.ref }}
+      - run: echo github.event.release.tag_name ${{ github.event.release.tag_name }}
+
+      - name: Dump gh.event.release
+        run: echo "$JOB_CONTEXT"
+        env:
+          JOB_CONTEXT: ${{ toJson(github.event.release) }}
+        
       - run: echo ${{ github.event }}
-      - run: echo ${{ fromJSON(github.event) }}
+      - name: Dump gh.event
+        run: echo "$JOB_CONTEXT"
+        env:
+          JOB_CONTEXT: ${{ toJson(github.event) }}
+
       - run: cat package.json
       # - run: yarn publish
 
