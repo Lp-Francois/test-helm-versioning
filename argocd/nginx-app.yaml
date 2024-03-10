@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 6.2.1 # old version, you can specify any version here
+    targetRevision: 15.14.0 # old version, you can specify any version here
     chart: nginx
     helm:
       values: |
