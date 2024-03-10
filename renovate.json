@@ -3,8 +3,7 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "datasources": ["helm", "crd", "argocd", "kubernetes"]
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
     }
   ],
   "argocd": {
